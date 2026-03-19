@@ -3,6 +3,8 @@
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -15,12 +17,13 @@ body {
   border-radius: 5px;
 
   &__img {
+    display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
-    display: block;
     width: 160px;
     height: 134px;
+    object-fit: contain;
   }
 
   &__title {
@@ -53,6 +56,7 @@ body {
     font-size: 10px;
     line-height: 14px;
     font-weight: 400;
+    color: $main;
   }
 
   &__price-wrapper {
@@ -84,11 +88,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 40px;
+    width: 100%;
     text-decoration: none;
     background-color: $blueAccent;
     color: $white;
     border-radius: 5px;
-    padding: 10px 40px;
+    padding: 0;
     font-size: 14px;
     font-weight: 700;
     line-height: 16px;
@@ -98,29 +103,7 @@ body {
     &:hover {
       background-color: $white;
       color: $blueAccent;
-    }
-  }
-}
-
-.stars {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  &__star {
-    background-image: url(../images/star.svg);
-    width: 16px;
-    height: 16px;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    &:not(:last-child) {
-      margin-right: 4px;
-    }
-
-    &:nth-child(-n + 4) {
-      background-image: url(../images/star-active.svg);
+      border: 1px solid $blueAccent;
     }
   }
 }
